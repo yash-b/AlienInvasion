@@ -11,14 +11,11 @@ def run_game():
     surface = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("Alien Invasion")
     bg_color = (230, 230, 230)
-    ship = Ship(surface)
+    ship = Ship(ai_settings, surface)
 
     while True:
-        gf.check_events()
-
-        surface.fill(ai_settings.bg_color)
-        ship.blitme()
-        pygame.display.flip()
+        gf.check_events(ship)
+        gf.update_screen(ai_settings, surface, ship)
 
 
 run_game()

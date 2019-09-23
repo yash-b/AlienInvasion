@@ -1,0 +1,8 @@
+# AlienInvasion
+.venv/
+venv/
+.idea/
+idea/
+.vscode/
+.__pycache__/
+__pycache__/
