@@ -11,6 +11,7 @@ from modules.button import Button
 from modules.ship import Ship
 import modules.game_functions as gf
 
+
 def run_game():
     # Game settings init
     pygame.init()
@@ -39,5 +40,6 @@ def run_game():
             gf.update_aliens(ai_settings, stats, screen, sb, ship, aliens, bullets)
 
         gf.update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_button)
+
 
 run_game()
