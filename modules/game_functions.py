@@ -1,12 +1,10 @@
 import sys
 from time import sleep
-
 import pygame
+from modules.bullet import Bullet
+from modules.alien import Alien
 
-from bullet import Bullet
-from alien import Alien
-
-def check_aliens_bottom(ai_settings, stats, screen, sb, ship, aliens, bullets):
+def check_aliens_bottom(ai_settings, screen, stats, sb, ship, aliens, bullets):
     """Check if any aliens have reached the bottom of the screen."""
     screen_rect = screen.get_rect()
     for alien in aliens.sprites():
@@ -210,7 +208,7 @@ def ship_hit(ai_settings, screen, stats, sb, ship, aliens, bullets):
     # Pause.
     sleep(0.5)
 
-def update_aliens(ai_settings, stats, screen, ship, aliens, bullets):
+def update_aliens(ai_settings, stats, screen, sb, ship, aliens, bullets):
     """ Check if the fleet is at an edge, then update the postions of all aliens in the fleet. """
     check_fleet_edges(ai_settings, aliens)
     aliens.update()
