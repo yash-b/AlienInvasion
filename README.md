@@ -15,5 +15,5 @@ Basic Alien Invasion project using python, pygame, and legally-obtained sprites.
 - Q: Quit game
 
 #### Contact:
-Yash Bhambhani
+Yash Bhambhani  
 bhambhani.yash@gmail.com
